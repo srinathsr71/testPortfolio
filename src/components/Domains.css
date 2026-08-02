@@ -1,0 +1,101 @@
+.domains-section {
+    padding: 3rem 0 2rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.domains-wow-title {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
+}
+
+.domains-wow-title .gradient-text {
+    background: var(--grad-aurora);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.marquee-wrapper {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 2rem;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+    min-width: 100%;
+    animation: scrollX 30s linear infinite;
+}
+
+.domain-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.domain-item:hover {
+    background: rgba(14, 165, 233, 0.1);
+    border-color: rgba(14, 165, 233, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.15);
+}
+
+.domain-icon {
+    color: var(--indigo);
+    display: flex;
+    align-items: center;
+}
+
+.domain-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-2);
+}
+
+.domain-item:hover .domain-name {
+    color: var(--text);
+}
+
+@keyframes scrollX {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 1.5rem));
+    }
+}
+
+@media (max-width: 768px) {
+    .domains-section {
+        padding: 2rem 0;
+    }
+    .domain-item {
+        padding: 0.6rem 1.2rem;
+    }
+    .domain-name {
+        font-size: 0.85rem;
+    }
+}

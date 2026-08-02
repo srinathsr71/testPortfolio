@@ -19,8 +19,8 @@ const Experience = () => {
             ]
         },
         {
-            company: 'Independent Consultant',
-            role: 'QA Automation Engineer',
+            company: '(Freelancer)',
+            role: 'Independent QA Automation Projects & Upskilling',
             period: 'Nov 2021 - Dec 2022',
             description: [
                 'Developed end-to-end test suites and executed functional, regression, and usability testing across web and mobile app prototypes.',

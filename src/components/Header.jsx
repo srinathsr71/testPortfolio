@@ -38,7 +38,8 @@ const Header = ({ theme, toggleTheme }) => {
     const navLinks = [
         { name: 'About', href: '#about' },
         { name: 'Experience', href: '#experience' },
-        { name: 'Certifications', href: '#certificates' },
+        { name: 'Impact & Stats', href: '#impact' },
+        { name: 'Domains', href: '#domains' },
         { name: 'Projects', href: '#projects' },
         { name: 'Tools', href: '#tools' },
         { name: 'Skills', href: '#skills' },
