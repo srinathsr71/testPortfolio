@@ -357,38 +357,48 @@ img {
   white-space: nowrap;
 }
 
-/* Primary — always white text on gradient */
+/* Primary — Glowing Neon Button */
 .btn-primary {
-  background: var(--btn-primary-bg);
-  color: var(--btn-primary-text) !important;
+  background: var(--grad-neon);
+  background-size: 200% auto;
+  color: #000 !important;
   border: none;
-  box-shadow: var(--shadow-brand);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+  animation: shine 3s linear infinite;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px var(--glow-indigo);
-  color: var(--btn-primary-text) !important;
-  filter: brightness(1.1);
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.8), 0 0 60px rgba(79, 172, 254, 0.4);
+  color: #fff !important;
 }
 
 .btn-primary:active {
-  transform: translateY(0);
+  transform: scale(0.95);
 }
 
-/* Outline — indigo/purple border, high contrast text */
+/* Outline — Cyber Border Button */
 .btn-outline {
-  background: var(--btn-outline-hover-bg);
-  color: var(--btn-outline-text) !important;
-  border: 1.5px solid var(--btn-outline-border);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  color: #00f2fe !important;
+  border: 1px solid #00f2fe;
+  box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .btn-outline:hover {
-  background: var(--btn-outline-hover-bg);
-  transform: translateY(-2px);
-  box-shadow: 0 0 0 3px var(--glow-indigo);
-  color: var(--btn-outline-text) !important;
-  filter: brightness(1.1);
+  background: rgba(0, 242, 254, 0.1);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.5), inset 0 0 15px rgba(0, 242, 254, 0.4);
+  color: #fff !important;
 }
 
 /* Ghost */

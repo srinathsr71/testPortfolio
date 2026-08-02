@@ -46,20 +46,21 @@
     align-items: center;
     gap: 0.5rem;
     padding: 1.5rem 1rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: rgba(0, 242, 254, 0.02);
+    border: 1px solid rgba(0, 242, 254, 0.15);
     border-radius: 16px;
     cursor: default;
-    transition: all 0.25s ease;
+    transition: all 0.3s ease;
     text-align: center;
     backdrop-filter: blur(16px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .tool-item:hover {
-    border-color: var(--border-brand);
-    background: var(--surface-hover);
-    box-shadow: 0 8px 25px var(--glow-indigo);
-    transform: translateY(-3px) scale(1.03);
+    border-color: rgba(0, 242, 254, 0.6);
+    background: rgba(0, 242, 254, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 242, 254, 0.25), inset 0 0 15px rgba(0, 242, 254, 0.05);
+    transform: translateY(-4px) scale(1.05);
 }
 
 .tool-emoji {

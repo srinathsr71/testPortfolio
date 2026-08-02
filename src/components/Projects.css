@@ -19,14 +19,15 @@
 }
 
 .project-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: rgba(0, 242, 254, 0.02);
+    border: 1px solid rgba(0, 242, 254, 0.15);
     border-radius: 20px;
     padding: 1.75rem;
     position: relative;
     overflow: hidden;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    backdrop-filter: blur(16px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Gradient top bar on hover */
@@ -37,7 +38,9 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: var(--grad-aurora);
+    background: linear-gradient(90deg, #00f2fe, #4facfe, #00f2fe);
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -47,9 +50,9 @@
 }
 
 .project-card:hover {
-    border-color: var(--border-brand);
-    box-shadow: var(--shadow-brand);
-    transform: translateY(-4px);
+    border-color: rgba(0, 242, 254, 0.6);
+    box-shadow: 0 10px 40px rgba(0, 242, 254, 0.2), inset 0 0 20px rgba(0, 242, 254, 0.05);
+    transform: translateY(-5px);
 }
 
 .project-glow {

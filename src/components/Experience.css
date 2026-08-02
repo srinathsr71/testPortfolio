@@ -48,6 +48,34 @@
     z-index: 1;
 }
 
+.timeline-content {
+    background: rgba(0, 242, 254, 0.03);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    border-color: rgba(0, 242, 254, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 242, 254, 0.15);
+    transform: translateX(10px);
+}
+
+/* Arrow */
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -16px;
+    border-style: solid;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent rgba(0, 242, 254, 0.2) transparent transparent;
+}
+
 .timeline-card {
     background: var(--surface);
     border: 1px solid var(--border);
