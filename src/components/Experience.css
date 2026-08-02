@@ -1,0 +1,124 @@
+.experience {
+    background: var(--bg-2, var(--bg));
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg,
+            var(--indigo) 0%,
+            var(--purple) 50%,
+            var(--pink) 100%);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 2.5rem 2rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+/* Dot on the line */
+.timeline-dot {
+    position: absolute;
+    left: -2rem;
+    top: 6px;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--grad-aurora);
+    box-shadow: 0 0 12px var(--glow-indigo);
+    border: 2px solid var(--bg);
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.timeline-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 1.5rem;
+    backdrop-filter: blur(16px);
+    transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+    border-color: var(--border-brand);
+    box-shadow: var(--shadow-brand);
+    transform: translateX(4px);
+}
+
+.period-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--tag-bg);
+    color: var(--indigo) !important;
+    border: 1px solid var(--tag-border);
+    letter-spacing: 0.03em;
+    margin-bottom: 0.75rem;
+}
+
+.timeline-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-company {
+    font-size: 0.9rem;
+    color: var(--purple);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.description li {
+    font-size: 0.875rem;
+    color: var(--text-2);
+    line-height: 1.65;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.description li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--indigo);
+    font-size: 0.75rem;
+    top: 0.1em;
+}
+
+@media (max-width: 600px) {
+    .timeline {
+        padding-left: 1.5rem;
+    }
+}

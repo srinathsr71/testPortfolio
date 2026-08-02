@@ -1,0 +1,139 @@
+.contact {
+    background: var(--bg-2, var(--bg));
+}
+
+.contact-container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 3rem;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient top strip */
+.contact-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--grad-aurora);
+}
+
+.contact-content .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+
+.contact-text {
+    color: var(--text-2);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+}
+
+.contact-btn {
+    margin-bottom: 1.5rem;
+}
+
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.info-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--surface-2, rgba(255, 255, 255, 0.05));
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.75rem 1.25rem;
+    transition: all 0.25s ease;
+}
+
+.info-display:hover {
+    border-color: var(--border-brand);
+}
+
+.info-link {
+    color: var(--text-2) !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    flex: 1;
+}
+
+.info-link:hover {
+    color: var(--indigo) !important;
+}
+
+.copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    color: var(--text-3);
+    background: var(--surface);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.copy-btn:hover,
+.copy-btn.copied {
+    border-color: var(--indigo);
+    color: var(--indigo) !important;
+    background: var(--tag-bg);
+}
+
+.copy-feedback {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--indigo) !important;
+    white-space: nowrap;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    color: var(--text-2) !important;
+    background: var(--surface);
+    transition: all 0.25s ease;
+}
+
+.social-links a:hover {
+    border-color: var(--indigo);
+    color: var(--indigo) !important;
+    background: var(--tag-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--glow-indigo);
+}

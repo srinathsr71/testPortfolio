@@ -1,0 +1,54 @@
+.about {
+    background: var(--bg);
+}
+
+/* Centered text layout (no image) */
+.about-text-centered {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text-centered p {
+    color: var(--text-2);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.about-text-centered p:last-of-type {
+    margin-bottom: 0.75rem;
+}
+
+.skills-list-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-3);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.skills-list li {
+    padding: 6px 14px;
+    border-radius: 50px;
+    background: var(--tag-bg);
+    color: var(--tag-text) !important;
+    border: 1px solid var(--tag-border);
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.skills-list li:hover {
+    background: var(--surface-hover);
+    border-color: var(--indigo);
+}

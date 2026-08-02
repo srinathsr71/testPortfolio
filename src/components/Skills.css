@@ -1,0 +1,125 @@
+.skills {
+    background: var(--bg);
+}
+
+/* Bento Grid Layout */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+/* Make first and last card wider */
+.bento-grid .skill-card:nth-child(1) {
+    grid-column: span 2;
+}
+
+/* .bento-grid .skill-card:nth-child(5) {
+    grid-column: span 2;
+} */
+
+.skill-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(16px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, var(--card-glow, rgba(99, 102, 241, 0.08)) 0%, transparent 70%);
+    pointer-events: none;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.skill-card:hover::before {
+    opacity: 1;
+}
+
+.skill-card:hover {
+    border-color: var(--border-brand);
+    box-shadow: var(--shadow-brand);
+    transform: translateY(-3px);
+}
+
+.skill-icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: var(--tag-bg);
+    color: var(--indigo) !important;
+    margin-bottom: 1.1rem;
+    border: 1px solid var(--tag-border);
+}
+
+.skill-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+}
+
+.skill-list li {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 50px;
+    background: var(--surface-2, rgba(255, 255, 255, 0.05));
+    color: var(--text-2) !important;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.skill-list li:hover,
+.skill-list li.selected {
+    background: var(--tag-bg);
+    color: var(--tag-text) !important;
+    border-color: var(--tag-border);
+    transform: scale(1.04);
+}
+
+@media (max-width: 900px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bento-grid .skill-card:nth-child(1),
+    .bento-grid .skill-card:nth-child(5) {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-grid .skill-card:nth-child(1),
+    .bento-grid .skill-card:nth-child(5) {
+        grid-column: span 1;
+    }
+}

@@ -1,0 +1,213 @@
+/* ============================================================
+   CERTIFICATES — Premium Card Design
+   ============================================================ */
+.certificates {
+    background: var(--bg);
+}
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Card */
+.cert-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 1.75rem;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(16px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--grad-aurora);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cert-card:hover::after {
+    opacity: 1;
+}
+
+.cert-card:hover {
+    border-color: var(--border-brand);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(99, 102, 241, 0.15), 0 0 0 1px var(--border-brand);
+}
+
+/* Card header */
+.cert-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cert-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--tag-bg);
+    border: 1px solid var(--tag-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--indigo);
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover .cert-icon-wrap {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: var(--indigo);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+.cert-issuer-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: var(--tag-bg);
+    color: var(--indigo) !important;
+    border: 1px solid var(--tag-border);
+}
+
+.cert-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+}
+
+.cert-institution {
+    font-size: 0.85rem;
+    color: var(--purple);
+    font-weight: 600;
+}
+
+.cert-desc {
+    font-size: 0.85rem;
+    color: var(--text-2);
+    line-height: 1.6;
+}
+
+/* Topic tags */
+.cert-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.25rem;
+}
+
+.cert-topic-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(168, 85, 247, 0.08);
+    color: var(--purple) !important;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+/* View button */
+.cert-view-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--indigo) !important;
+    margin-top: auto;   /* ADD THIS */
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    transition: all 0.25s ease;
+}
+
+.cert-view-btn:hover {
+    gap: 0.55rem;
+    filter: brightness(1.2);
+}
+
+/* ============================================================
+   Certificate Modal
+   ============================================================ */
+.cert-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 2rem;
+    backdrop-filter: blur(12px);
+}
+
+.cert-modal {
+    background: var(--bg-2, #0d0d12);
+    border: 1px solid var(--border-brand);
+    border-radius: 20px;
+    padding: 1.5rem;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 1;
+}
+
+.modal-close:hover {
+    border-color: var(--indigo);
+    color: var(--indigo);
+    background: var(--surface-hover);
+}
+
+.cert-modal img {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .certs-grid {
+        grid-template-columns: 1fr;
+    }
+}
