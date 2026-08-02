@@ -50,7 +50,7 @@ const Header = ({ theme, toggleTheme }) => {
         <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
             <div className="container header-container">
                 <a href="#home" className="logo">
-                    <span className="logo-qa">QA</span><span className="logo-dot">.</span>Portfolio
+                    <span style={{ color: '#ffffff' }}>Portfolio</span>
                 </a>
 
                 {/* Desktop Nav */}
