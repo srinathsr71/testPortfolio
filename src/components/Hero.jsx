@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Eye, FolderOpen } from 'lucide-react';
 import resumeFile from '../assets/SR_Srinath_Resume.pdf';
-import profileImg from '../assets/Profile_photo.jpeg';
+import profileImg from '../assets/Profile_photo.jpg';
 import './Hero.css';
 
 const Hero = () => {
@@ -70,12 +70,12 @@ const Hero = () => {
                             <span className="stat-label">Years Experience</span>
                         </div>
                         <div className="stat-item">
-                            <span className="stat-number">200+</span>
-                            <span className="stat-label">Bugs Reported</span>
+                            <span className="stat-number">300+</span>
+                            <span className="stat-label">Tests Automated</span>
                         </div>
                         <div className="stat-item">
-                            <span className="stat-number">6+</span>
-                            <span className="stat-label">Products Shipped</span>
+                            <span className="stat-number">4+</span>
+                            <span className="stat-label">Major Projects</span>
                         </div>
                     </motion.div>
 

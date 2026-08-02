@@ -4,11 +4,11 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
 import Education from './components/Education';
-import Certificates from './components/Certificates';
+import Domains from './components/Domains';
+import Impact from './components/Impact';
 import Projects from './components/Projects';
 import Tools from './components/Tools';
 import Skills from './components/Skills';
-import Testimonials from './components/Testimonials';
 //import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -41,14 +41,14 @@ function App() {
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
+        <Domains />
         <About />
         <Experience />
         <Education />
-        <Certificates />
+        <Impact />
         <Projects />
         <Tools />
         <Skills />
-        <Testimonials />
         {/* <Blog /> */}
         <Contact />
       </main>

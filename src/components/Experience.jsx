@@ -19,7 +19,7 @@ const Experience = () => {
             ]
         },
         {
-            company: 'Freelancer',
+            company: 'Independent Consultant',
             role: 'QA Automation Engineer',
             period: 'Nov 2021 - Dec 2022',
             description: [
@@ -28,17 +28,6 @@ const Experience = () => {
                 'Conducted API testing using Postman and Rest Assured, validating query parameters, authentication headers, and JSON response schemas.',
                 'Documented detailed test cases, traceability matrices (RTM), and bug reports in JIRA to ensure complete test coverage.',
                 'Performed automated mobile testing on Android platforms using Appium.'
-            ]
-        },
-        {
-            company: 'Self-Employed',
-            role: 'Independent QA Automation Projects & Upskilling',
-            period: 'June 2021 - Nov 2021',
-            description: [
-                'Focused on upskilling in Automation methodologies and API testing.',
-                'Designed scalable UI automation frameworks for web applications.',
-                'Studied and applied BDD Cucumber frameworks for clear execution visibility.',
-                'Explored DevOps practices including Jenkins CI/CD pipelines.'
             ]
         }
     ];
